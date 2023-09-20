@@ -1,0 +1,137 @@
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group ">
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3 " (click)="filterbyclick('All')">
+    <h4>All</h4>
+  </label>
+
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1" (click)="filterbyclick('R')">
+    <h4>Rings</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2" (click)="filterbyclick('E')">
+    <h4>Earrings</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" (click)="filterbyclick('B')">
+    <h4>Bracelets</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" (click)="filterbyclick('Nose')">
+    <h4>Nose pins & Rings</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" (click)="filterbyclick('JS')">
+    <h4>Jewellery Sets</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" (click)="filterbyclick('M')">
+    <h4>Mangalsutra</h4>
+  </label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3" (click)="filterbyclick('Neck')">
+    <h4>Necklaces</h4>
+  </label>
+
+
+
+</div>
+
+<!-- pagination using slice -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mt-3" *ngFor="let jeweler of jewelerforfilter |slice:start:end">
+      <div class="card" style="width: 18rem;" style="width:355px">
+        <img [src]="jeweler.image" class="card-img-top" alt="..." style="width: 350px; height:350px">
+        <div class="card-body">
+          <h6 class="card-title">{{jeweler.name}}</h6>
+          <h6 class="card-title">{{jeweler.price|currency:'INR'}}</h6>
+          <p class="card-text">
+            <app-star [rating]="jeweler.rating"></app-star>
+          </p>
+          <a href="#" class="btn btn-primary">Add Card</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav aria-label="Page navigation example" [ngClass]="'nav'">
+  <ul class="pagination" [ngClass]="'nav1'">
+    <li class="page-item"><a class="page-link">Previous</a></li>
+    <li class="page-item"><a class="page-link" (click)="changeonclick(1)">1</a></li>
+    <li class="page-item"><a class="page-link" (click)="changeonclick(2)">2</a></li>
+    <li class="page-item"><a class="page-link" (click)="changeonclick(3)">3</a></li>
+    <!-- <li class="page-item"><a class="page-link" href="#" (click)="changeonclick(4)">4</a></li> -->
+  </ul>
+</nav>
+
+<div class="d-flex flex-row mb-3" [ngClass]="'footer'">
+  <div class="p-3">
+    <h6>Quick link</h6>
+    <a href="">Support</a><br><a href="">store Locater</a><br><a href="">Careers</a><br><a href="">Jewellery
+      care</a><br><a href="">Blogs</a><br><a href="">Reviews</a><br><a href="">Privacy policy</a><br><a
+      href="">Shoppings & Handding</a><br><a href="">Internnationnal Shippinng and Handding</a><br><a href="">Terms and
+      service</a>
+    <hr>
+
+  </div>
+  <div class="p-2">
+    <h6>Newsletter</h6>
+    <form>
+
+
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
+        size="60">
+      <button [ngClass]="'button'">SUBSCRIBE</button>
+
+
+
+    </form>
+
+  </div>
+  <div class="p-2">
+    <h6>Contact us</h6>
+    BIC :HMC -3432YUYY23837771
+    For Any suggestions
+    and complaints <br>
+
+    please contact us at:<br>
+    -carejeweller.com<br>
+    -887676288288287(10am to 10pm)<br>
+    <a href=""><img src="./assets/vedeo/getItOnGooglePlay_500x (1).webp" alt="" style="width: 150px;"></a><br><a
+      href=""></a>
+    <h6>channel partner</h6>
+    Online<br>
+    <img src="./assets/vedeo/Screenshot_2022-08-24_100852-removebg-preview (1).png" alt="" style="width: 300px;">
+    <!-- <img src="./assets/vedeo/logos-2.webp" alt="" style="width: 40px;">
+    <img src="./assets/vedeo/logos-6.webp" alt="" style="width: 40px;">
+    <img src="./assets/vedeo/logos-5.webp" alt="" style="width: 40px;">
+    <img src="./assets/vedeo/logos-3.webp" alt="" style="width: 40px;"> -->
+
+    <!-- <img src="./assets/vedeo/logos-3.webp" alt="" style="width: 40px;">
+    <img src="" alt="" style="width: 40px;"><br> -->
+   <br> Ofline:<br>
+    <img src="./assets/vedeo/Screenshot_2022-08-24_102005-removebg-preview.png" alt="" style="width: 100px;">
+    <!-- <img src="./assets/vedeo/logos-8.webp" alt="" style="width: 40px;"> -->
+  </div>
+
+</div>
+<div class="footer1 ">
+  <div class="d-flex  ">
+    <div class="p-2 flex-md-fill "><a href=""><i class="bi bi-youtube">SUBSCRIBE YOU TUBE channel</i></a></div>
+    <div class="p-2 flex-md-fill"><a href=""><i class="bi bi-facebook"></i>FOLLOW ON FACEBOOK</a></div>
+
+    <div class="p-2 "><a href=""><i class="bi bi-instagram" [ngClass]="'fir'">FOLLOW ON INSTA</i></a></div>
+  </div>
+
+
+</div>

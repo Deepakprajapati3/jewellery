@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-3 mt-3" *ngFor="let rose of roses">
+            <div class="card" style="width: 18rem;">
+                <img [src]="rose.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">{{rose.price|currency:'INR'}}</p>
+                  <p class="card-title"><app-star [rating]="rose.rating"></app-star></p>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary" (click)="onclick()">App card</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex flex-row mb-3" [ngClass]="'footer'">
+    <div class="p-3">
+      <h6>Quick link</h6>
+      <a href="">Support</a><br><a href="">store Locater</a><br><a href="">Careers</a><br><a href="">Jewellery
+        care</a><br><a href="">Blogs</a><br><a href="">Reviews</a><br><a href="">Privacy policy</a><br><a
+        href="">Shoppings & Handding</a><br><a href="">Internnationnal Shippinng and Handding</a><br><a href="">Terms and
+        service</a>
+      <hr>
+  
+    </div>
+    <div class="p-2">
+      <h6>Newsletter</h6>
+      <form>
+  
+  
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
+          size="60">
+        <button [ngClass]="'button'">SUBSCRIBE</button>
+  
+  
+  
+      </form>
+  
+    </div>
+    <div class="p-2">
+      <h6>Contact us</h6>
+      BIC :HMC -3432YUYY23837771
+      For Any suggestions
+      and complaints <br>
+  
+      please contact us at:<br>
+      -carejeweller.com<br>
+      -887676288288287(10am to 10pm)<br>
+      <a href=""><img src="./assets/vedeo/getItOnGooglePlay_500x (1).webp" alt="" style="width: 150px;"></a><br><a
+        href=""></a>
+      <h6>channel partner</h6>
+      Online<br>
+      <img src="./assets/vedeo/logos-1.webp" alt="" style="width: 40px;">
+      <img src="./assets/vedeo/logos-2.webp" alt="" style="width: 40px;">
+      <img src="./assets/vedeo/logos-6.webp" alt="" style="width: 40px;">
+      <img src="./assets/vedeo/logos-5.webp" alt="" style="width: 40px;">
+      <img src="./assets/vedeo/logos-3.webp" alt="" style="width: 40px;">
+  
+      <img src="./assets/vedeo/logos-3.webp" alt="" style="width: 40px;">
+      <img src="" alt="" style="width: 40px;"><br>
+      Ofline:<br>
+      <img src="./assets/vedeo/logos-7.webp" alt="" style="width: 40px;">
+      <img src="./assets/vedeo/logos-8.webp" alt="" style="width: 40px;">
+    </div>
+  
+  </div>
+  <div class="footer1 ">
+    <div class="d-flex  ">
+      <div class="p-2 flex-md-fill "><a href=""><i class="bi bi-youtube">SUBSCRIBE YOU TUBE channel</i></a></div>
+      <div class="p-2 flex-md-fill"><a href=""><i class="bi bi-facebook"></i>FOLLOW ON FACEBOOK</a></div>
+  
+      <div class="p-2 "><a href=""><i class="bi bi-instagram" [ngClass]="'fir'">FOLLOW ON INSTA</i></a></div>
+    </div>
+  
+  
+  </div>
